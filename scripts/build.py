@@ -209,7 +209,7 @@ def layout(*, depth: int, title: str, desc: str, body: str, active: str = NO_NAV
            head: str = "", scripts: list[str] | None = None, canonical: str = "",
            jsonld: str = "", wide: bool = False, body_class: str = "") -> str:
     rel = "../" * depth if depth else "./"
-    full_title = title if title.endswith("Ya-KG") else f"{title} · Ya-KG"
+    full_title = title if "Ya-KG" in title else f"{title} · Ya-KG"
     canon = f"{SITE_URL}/{canonical}" if canonical else SITE_URL + "/"
     scripts = scripts or []
     js = "".join(f'<script src="{asset(rel, s)}" defer></script>' for s in ["js/core.js"] + scripts)

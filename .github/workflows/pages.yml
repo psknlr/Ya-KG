@@ -13,7 +13,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -28,6 +28,10 @@ jobs:
       - name: Resolve Pages base path
         id: pages
         uses: actions/configure-pages@v5
+        with:
+          # Turn Pages on (build_type: workflow) if it is not configured yet,
+          # instead of failing with "Get Pages site failed / Not Found".
+          enablement: true
 
       - name: Build site
         env:

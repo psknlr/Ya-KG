@@ -115,10 +115,15 @@ python3 scripts/build.py --skip-concepts
 
 ## 部署
 
-`main` 分支有改动时，[`pages.yml`](.github/workflows/pages.yml) 会自动构建并发布。
-**首次需要在仓库 Settings → Pages → Source 选择 “GitHub Actions”**（只需设置一次）。
+`main` 分支有改动时，[`pages.yml`](.github/workflows/pages.yml) 自动构建并发布到 GitHub Pages。
+无需任何手动设置——工作流里 `configure-pages` 带 `enablement: true`，仓库没开 Pages 时会自动开启。
 
 产物不入库——`dist/` 在 CI 中现场生成，所以仓库里永远只有源数据和源代码。
+
+> **不要再加第二个 Pages 工作流。** GitHub 在 Settings → Pages 里推荐的 Jekyll 模板
+> （`jekyll-gh-pages.yml`）会用 Jekyll 构建**仓库根目录**并发布，也就是把 README 当成网站，
+> 而且和 `pages.yml` 共用 `pages` 并发组——两者会互相抢占，谁后跑谁覆盖。
+> 本仓库只应有 `pages.yml` 一个部署工作流。
 
 ## 发现错误？
 
