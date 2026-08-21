@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 数据格式说明
+    url: https://github.com/psknlr/Ya-KG/blob/main/data/SCHEMA.md
+    about: kg.json 的字段含义、读取示例与已知局限
+  - name: 参与改进
+    url: https://github.com/psknlr/Ya-KG/blob/main/CONTRIBUTING.md
+    about: 如何直接修改数据并提 PR

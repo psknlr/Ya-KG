@@ -1,0 +1,47 @@
+name: 数据订正 · Data correction
+description: 报告术语归类、关系、参数、页码或错别字问题
+title: "[数据] "
+labels: ["data"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢订正！**教材原文一句话 + 页码**是最关键的信息——有它就能直接核对并修正。
+  - type: input
+    id: concept
+    attributes:
+      label: 概念名或词条链接
+      placeholder: 全冠 · 或 https://psknlr.github.io/Ya-KG/c/1234/
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 问题类型
+      options:
+        - 术语归类错误（实体类型不对）
+        - 关系连错或方向反了
+        - 参数数值 / 单位 / 适用条件有误
+        - 知识点内容有误或断句错误
+        - 页码偏移
+        - 错别字（含扫描识别错字）
+        - 概念缺失
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 现在是什么，应该是什么
+      placeholder: |
+        现在：肩台宽度 0.8~1.0mm，标注适用于「全瓷冠牙体预备颈部肩台」
+        应该：……
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 教材原文与页码
+      placeholder: 「……」（第8版 p123）
+    validations:
+      required: true
