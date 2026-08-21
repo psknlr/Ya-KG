@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+title: "Ya-KG: 口腔修复学（第8版）知识图谱"
+message: "If you use this dataset, please cite it as below."
+type: dataset
+authors:
+  - name: "Ya-KG contributors"
+abstract: >-
+  A structured knowledge graph extracted from 《口腔修复学》 (Prosthodontics),
+  8th edition: 4,882 entities across 14 types, 9,242 typed relations with
+  sentence-level evidence, 5,458 structured knowledge points and 1,368
+  quantitative clinical parameters, each traceable to a source page.
+keywords:
+  - prosthodontics
+  - dentistry
+  - knowledge graph
+  - 口腔修复学
+  - 知识图谱
+  - medical education
+license: CC-BY-NC-SA-4.0
+url: "https://psknlr.github.io/Ya-KG/"
+repository-code: "https://github.com/psknlr/Ya-KG"

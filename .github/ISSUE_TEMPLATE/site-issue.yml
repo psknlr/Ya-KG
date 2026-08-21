@@ -1,0 +1,27 @@
+name: 网站问题 · Site issue
+description: 页面显示异常、交互失灵、性能问题
+title: "[网站] "
+labels: ["site"]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: 出问题的页面
+      placeholder: https://psknlr.github.io/Ya-KG/explorer/
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: 发生了什么 / 期望是什么
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: 浏览器与设备
+      placeholder: Safari 18 / iPhone 15 · Chrome 131 / Windows 11
+  - type: textarea
+    id: extra
+    attributes:
+      label: 截图或控制台报错（可选）
